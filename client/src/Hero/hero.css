@@ -1,0 +1,249 @@
+/* .heroimg{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin:40px auto ;
+    background-color: transparent;
+    border-radius: 20px;
+} */
+
+
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #3440ed;
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #3a45db;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+.buttoncon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+
+
+}
+.content{
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.content h1{
+    font-size: 45px;
+}
+.content h1 span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgb(52, 43, 230); 
+  animation: typeAndDelete 4s steps(11) infinite, 
+             blinkCursor 0.5s step-end infinite alternate;
+  background: linear-gradient(70deg, blue, purple); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+
+@keyframes typeAndDelete {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 11ch; 
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+@keyframes blinkCursor {
+  0% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: rgb(11, 10, 11);
+  }
+}
+
+.content p{
+    font-size: 18px;
+    padding: 7px;
+    width: 90%;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+
+.Scontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px; /* Adjust as needed */
+  margin-left: 70px;
+  position: relative;
+  gap: 50px;
+
+}
+
+.card {
+  position: relative;
+  width: auto; /* Adjust to the image width */
+  max-width: 100%; /* Ensures responsive layout */
+  height: auto; /* Adjust the height based on the image's aspect ratio */
+  z-index: 1; /* Positioned below the blob animation */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  border-radius: 14px;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.blob {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 150px;  /* Adjust size as necessary */
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ff00ae;
+  opacity: 0.5; /* Adjust opacity for subtle effect */
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+  transform: translate(-50%, -50%); /* Centering the blob in the image */
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translate3d(100%, 0, 0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate3d(100%, 100%, 0);
+  }
+  75% {
+    transform: translate(-50%, -50%) translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0);
+  }
+}
+
+.heroimg {
+  width: 100%; /* Ensure the image stretches to fit the container */
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the entire area */
+  border-radius: 10px; /* Optional, to round the image edges */
+  position: relative;
+  z-index: 3;
+   /* Keep the image on top */
+}

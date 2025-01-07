@@ -1,0 +1,22 @@
+/* .interview-container{
+    background: url('./mock.gif');
+} */
+
+/* .vedio-container img{
+    width: 500px;
+    height: 300px;
+} */
+
+/* .vedio-container{
+      height: 3rem;
+    border-radius: 8px;
+    overflow: hidden; 
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+} */
+.vedio{
+   width: 800px;
+   height: 500px;
+   border-radius: 20px  ;
+}

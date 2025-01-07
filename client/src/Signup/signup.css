@@ -1,0 +1,17 @@
+/* Global CSS for gradient text effect */
+.Main {
+    background: linear-gradient(90deg, blue, purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; /* Use font-weight for bold text */
+}
+
+
+.image{
+    position: absolute;
+    top: 400px;
+    left: 1100px;
+    height: 300px;
+    width: 500px;
+}
